@@ -16,10 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: test checkout branch
-      run: |
-        git fetch origin master
-        git checkout -b master origin/master
     - name: Setup credentials
       run: | 
         mkdir -p ~/.pub-cache 
@@ -34,6 +30,7 @@ jobs:
       run: pub publish -f
     - name: Merge to master
       run: |
+        git fetch origin master
         git checkout -b master origin/master
         git merge integration
         git push
