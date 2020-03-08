@@ -1,0 +1,32 @@
+name: Dart CI - deploy
+
+on:
+  push:
+    branches: [ integration ]
+  pull_request:
+    branches: [ integration ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image:  google/dart:latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup credentials
+      run: | 
+        mkdir -p ~/.pub-cache 
+        cat <<EOF > ~/.pub-cache/credentials.json
+        ${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}
+        EOF
+    - name: Publish package
+      run: pub publish -f
+    - name: Install dependencies
+      run: pub get
+    - name: Run tests
+      run: pub run test
+    - name: Deploy
+      run: pub publish
