@@ -30,6 +30,6 @@ jobs:
       run: pub publish -f
     - name: Merge to master
       run: |
-        git checkout master refs/remotes/origin/master
+        git checkout -b master origin/master
         git merge integration
         git push
