@@ -1,3 +1,8 @@
+## [0.0.1-docs] - 20200309
+
+- write docs
+- add equality operator and checks
+
 ## [0.0.1-integration-to-master-e] - 20200309
 
 - abandon git merge on release
