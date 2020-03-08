@@ -15,4 +15,6 @@ class Distance {
   Distance convert(DistanceUnit unit) {
     return Distance(getValue(unit), unit);
   }
+
+  bool operator ==(o) => o is Distance && o.value == value && o.unit == unit;
 }
