@@ -1,3 +1,7 @@
+## [0.0.1] - 20200310
+
+- release
+
 ## [0.0.1-docs-readme] - 20200309
 
 - add status badge
