@@ -1,3 +1,7 @@
+## [0.0.1-integration-to-master] - 20200309
+
+- Initialize github to test, build and dry run `integration` branch and then merge `integration` unto `master`
+
 ## [0.0.1-integration] - 20200309
 
 - Initialize github to test, build and dry run `integration` branch
