@@ -1,6 +1,11 @@
 # measurement
+![Dart CI - deploy](https://github.com/aljorhythm/measurement/workflows/Dart%20CI%20-%20deploy/badge.svg?branch=integration)
 
-Library for handling units and values
+Dart library for handling units and values
+
+## Installation
+
+[pub.dev/measurement](https://pub.dev/packages/measurement#-installing-tab-)
 
 ## Usage
 

@@ -1,6 +1,7 @@
-## [0.0.1-docs-c] - 20200309
+## [0.0.1-docs-readme] - 20200309
 
-- ci/cd
+- add status badge
+- add pub.dev url
 
 ## [0.0.1-docs-b] - 20200309
 
