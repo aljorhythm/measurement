@@ -2,23 +2,19 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:measurement/measurement.dart';
 import 'package:measurement/unit.dart';
-import 'package:tuple/tuple.dart';
 
 void main() {
-  group('static', () {
-    final converters = Distance.converters;
-
-    test('centimetres to kilometres', () {
-      final Function centiToKm =
-          converters[Tuple2(DistanceUnit.CENTIMETRES, DistanceUnit.KILOMETRES)];
-      expect(centiToKm(100), 0.001);
+  group('Distance model', () {
+    test('new distance', () {
+      Distance distance = Distance(1.34, DistanceUnit.KILOMETRES);
+      expect(1.34, distance.value);
     });
 
-    test('kilometres to centimetres', () {
-      expect(
-          Distance.convertValue(
-              DistanceUnit.KILOMETRES, DistanceUnit.YARD, 1.34),
-          1465.4374);
+    test('convert distance', () {
+      Distance distance = Distance(1.34, DistanceUnit.KILOMETRES);
+      expect(1.34, distance.getValue(DistanceUnit.KILOMETRES));
+      expect(1340, distance.getValue(DistanceUnit.METRES));
+      expect(0.8326371400000001, distance.getValue(DistanceUnit.MILES));
     });
   });
 }
