@@ -1,3 +1,7 @@
+## [0.0.1-integration-to-master-d] - 20200309
+
+- fix git commands
+
 ## [0.0.1-integration-to-master-c] - 20200309
 
 - fix git commands
