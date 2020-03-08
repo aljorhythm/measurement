@@ -8,6 +8,8 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  trotter: ^1.1.1
+  tuple: ^1.0.3
   flutter:
     sdk: flutter
 

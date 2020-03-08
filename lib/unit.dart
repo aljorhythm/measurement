@@ -1,0 +1,10 @@
+enum DistanceUnit {
+  METRES,
+  CENTIMETRES,
+  MILLIMETRES,
+  KILOMETRES,
+  MILES,
+  FEET,
+  INCHES,
+  YARD
+}
