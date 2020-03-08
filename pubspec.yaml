@@ -1,6 +1,6 @@
 name: measurement
 description: utility for measurements requiring value and unit
-version: 0.0.1-docs-c
+version: 0.0.1-docs-readme
 homepage: https://github.com/aljorhythm/measurement
 
 environment:
