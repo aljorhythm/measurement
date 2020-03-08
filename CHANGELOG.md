@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1-beta] - 20200308
 
-* TODO: Describe initial release.
+Initialize CI/Cd
