@@ -1,13 +1,40 @@
 # measurement
 
-A new Flutter package project.
+Library for handling units and values
 
-## Getting Started
+## Usage
 
-This project is a starting point for a Dart
+See
+- [test/unit_test.dart](test/unit_test.dart) 
+- [test/measurement_test.dart](test/measurement_test.dart)
+
+### Common utilities
+
+```dart
+DistanceConversion.convertValue(
+    DistanceUnit.KILOMETRES, DistanceUnit.YARD, 1.34) // 1465.4374
+```
+### Modelling distance and conversion
+
+```dart
+Distance distance = Distance(1.34, DistanceUnit.KILOMETRES);
+distance.getValue(DistanceUnit.METRES); // 1340
+distance.convert(DistanceUnit.METRES);  // Distance(1340, DistanceUnit.METRES)
+```
+
+## Design
+
+### Default
+
+To avoid confusion among developers, there is no default unit for a measurement. Unit must be consciously supplied. If unit is known before hand, to avoid calculation measurements can be standardized.
+
+### Functional programming
+
+Conversions are as far as possible generated before hand, best during compilation. Functions are looked up with O(1) complexity.
+
+## Contribution
+
 [package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
