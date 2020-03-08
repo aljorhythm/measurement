@@ -22,8 +22,6 @@ jobs:
         cat <<EOF > ~/.pub-cache/credentials.json
         ${{ secrets.GOOGLE_OAUTH_CREDENTIALS }}
         EOF
-    - name: Publish package
-      run: pub publish -f
     - name: Install dependencies
       run: pub get
     - name: Run tests
