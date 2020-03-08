@@ -16,6 +16,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name : test git
+      run: |
+        git fetch origin master
+        git checkout -b master origin/master
+        git pull origin integration
+        exit
     - name: Setup credentials
       run: | 
         mkdir -p ~/.pub-cache 
@@ -32,5 +38,5 @@ jobs:
       run: |
         git fetch origin master
         git checkout -b master origin/master
-        git merge integration
+        git pull origin integration
         git push
