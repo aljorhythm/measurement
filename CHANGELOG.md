@@ -1,3 +1,7 @@
+## [0.0.1-integration-to-master-e] - 20200309
+
+- abandon git merge on release
+
 ## [0.0.1-integration-to-master-d] - 20200309
 
 - fix git commands
