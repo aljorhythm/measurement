@@ -16,6 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: test checkout branch
+      run: |
+        git fetch origin master
+        git checkout -b master origin/master
     - name: Setup credentials
       run: | 
         mkdir -p ~/.pub-cache 
