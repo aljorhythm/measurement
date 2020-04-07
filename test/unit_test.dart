@@ -12,11 +12,20 @@ main() {
       expect(0.001, centiToKm(100));
     });
 
-    test('kilometres to centimetres', () {
+    test('kilometres to yards', () {
       expect(
           1465.4374,
           DistanceConversion.convertValue(
               DistanceUnit.KILOMETRES, DistanceUnit.YARD, 1.34));
     });
+
+    // 一市里是半公里
+    test('li to kilometres', () {
+      expect(
+          4094.3975,
+          DistanceConversion.convertValue(
+              DistanceUnit.CHINESE_LI, DistanceUnit.KILOMETRES, 8188.7950));
+    });
+
   });
 }
