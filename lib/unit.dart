@@ -10,7 +10,12 @@ enum DistanceUnit {
   FEET,
   INCHES,
   YARD,
-  MICROMETRES
+  MICROMETRES,
+  CHINESE_CUN,
+  CHINESE_CHI,
+  CHINESE_ZHANG,
+  CHINESE_LI
+
 }
 
 class DistanceConversion {
@@ -25,7 +30,11 @@ class DistanceConversion {
     DistanceUnit.FEET: 3.28084,
     DistanceUnit.YARD: 1.09361,
     DistanceUnit.INCHES: 39.3701,
-    DistanceUnit.MILES: 0.000621371
+    DistanceUnit.MILES: 0.000621371,
+    DistanceUnit.CHINESE_CUN: 30,
+    DistanceUnit.CHINESE_CHI: 3,
+    DistanceUnit.CHINESE_ZHANG: 3 / 10,
+    DistanceUnit.CHINESE_LI: 1 / 500
   };
 
   static Map<Tuple2<DistanceUnit, DistanceUnit>, Function>
